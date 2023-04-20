@@ -1,28 +1,41 @@
 <script setup lang="ts">
-import ModeSelector from '../parts/ModeSelector.vue'
+import { ref } from 'vue'
+
+const value = ref('')
+
+const options = [
+  {
+    value: 'Option1',
+    label: 'Option1',
+  },
+  {
+    value: 'Option2',
+    label: 'Option2',
+  },
+  {
+    value: 'Option3',
+    label: 'Option3',
+  },
+  {
+    value: 'Option4',
+    label: 'Option4',
+  },
+  {
+    value: 'Option5',
+    label: 'Option5',
+  },
+]
 </script>
 
 <template>
-  <div class="grid_container">
-    <div class="selector">
-      <ModeSelector></ModeSelector>
-    </div>
-
-    <div class="form">
-      <h1>form</h1>
-    </div>
+  <div class="common-layout">
+    <el-container>
+      <el-header><el-select v-model="value" class="m-2" placeholder="Select" size="large">
+          <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select></el-header>
+      <el-main>Main</el-main>
+    </el-container>
   </div>
 </template>
 
-<style scoped>
-.grid_container {
-  display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    'selector form';
-}
-</style>
+<style scoped></style>
