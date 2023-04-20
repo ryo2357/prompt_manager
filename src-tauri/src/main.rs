@@ -3,20 +3,11 @@
     windows_subsystem = "windows"
 )]
 
-#[macro_use]
-extern crate log;
-
 mod initialize;
-use initialize::CONFIG as CONFIG;
-
 
 #[tokio::main]
 async fn main() {
     initialize::init();
-    debug!("debug");
-    info!("info");
-    warn!("warn");
-    error!("error");
 
     tauri::async_runtime::set(tokio::runtime::Handle::current());
     tauri::Builder::default()
