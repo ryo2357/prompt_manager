@@ -20,6 +20,9 @@ tauri = {version = "1.2", features = [] }
 
 tokio = { version = "1.24.1", features = ["full"] }
 
+arboard = "3.2.0"
+anyhow = { version = "1.0.70"}
+
 # initialize
 sysinfo = "0.28.4"
 

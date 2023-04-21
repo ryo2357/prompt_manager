@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "template-tauri",
+    "productName": "prompt_manager",
     "version": "0.0.0"
   },
   "tauri": {
